@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript" src="./jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+/*$(document).ready(function(){
+  $("div").delegate("i","click",function(){
+	var _this = $(this);
+	var  val = _this.val();
+	if (val == 1){
+   		$(".example-i").attr("disabled","disabled");
+	}else{
+  		$(".example-i").removeAttr("disabled");
+  	}
+  });
+
+  function aa(val){
+  	if (val == 1){
+   		$(".example-i").attr("disabled","disabled");
+	}else{
+  		$(".example-i").removeAttr("disabled");
+  	}
+  }
+})*/
+ function onAndOff(val,tclass){
+  	if (val == 1){
+   		$("."+tclass).attr("disabled","disabled");
+	}else{
+  		$("."+tclass).removeAttr("disabled");
+  	}
+  	console.log("."+tclass)
+ }
+</script>
+</head>
+<body>
+<div style="background-color:red">
+<input type="checkbox" onclick="onAndOff(this.value,'example-i')" class="ios-switch bigswitch tpl-switch-btn am-margin-top-xs ttr" checked="" value="1"> 
+<input type="checkbox" onclick="onAndOff(this.value,'example-i')"  class="ios-switch bigswitch tpl-switch-btn am-margin-top-xs tti" value="2">
+<button>请点击这里</button>
+ <input class="am-form-field example-i" placeholder="请输入审核失败的原因"  name="realName">
+
+</div>
+
+</body>
+</html>
